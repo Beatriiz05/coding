@@ -1,0 +1,135 @@
+<style>
+    .experiencia-container {
+        background: linear-gradient(145deg, rgba(42,9,68,0.9), rgba(59,24,95,0.9));
+        border-radius: 15px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 2px solid var(--roxo-claro);
+        box-shadow: 0 0 20px rgba(161,37,104,0.2);
+    }
+    
+    .experiencia-titulo {
+        color: var(--destaque);
+        font-size: 1.8em;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(254,194,96,0.3);
+    }
+    
+    .experiencia-lista {
+        display: grid;
+        gap: 2rem;
+    }
+    
+    .experiencia-item {
+        background: rgba(161,37,104,0.1);
+        border-radius: 10px;
+        padding: 1.5rem;
+        border: 1px solid var(--roxo-claro);
+        transition: all 0.3s ease;
+    }
+    
+    .experiencia-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(161,37,104,0.3);
+    }
+    
+    .experiencia-cabecalho {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .experiencia-icone {
+        font-size: 1.8em;
+        filter: drop-shadow(0 0 5px var(--destaque));
+    }
+    
+    .experiencia-empresa {
+        color: var(--destaque);
+        margin: 0;
+        font-size: 1.3em;
+    }
+    
+    .experiencia-local {
+        color: #ffffffcc;
+        margin-bottom: 1rem;
+        font-style: italic;
+    }
+    
+    .experiencia-detalhes {
+        border-left: 3px solid var(--destaque);
+        padding-left: 1rem;
+    }
+    
+    .detalhe-titulo {
+        color: var(--destaque);
+        margin: 0 0 0.5rem 0;
+        font-size: 1.1em;
+    }
+    
+    .experiencia-descricao {
+        color: #ffffffcc;
+        line-height: 1.6;
+        margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+        .experiencia-container {
+            padding: 1.5rem;
+        }
+        
+        .experiencia-item {
+            padding: 1rem;
+        }
+        
+        .experiencia-empresa {
+            font-size: 1.1em;
+        }
+    }
+    </style>
+
+    <h3 class="experiencia-titulo">EXPERIÊNCIA PROFISSIONAL</h3>
+    
+    <div class="experiencia-lista">
+       
+        <div class="experiencia-item">
+            <div class="experiencia-cabecalho">
+                <span class="experiencia-icone">🧠</span>
+                <h4 class="experiencia-empresa">PSYCONET - 2024</h4>
+            </div>
+            <p class="experiencia-local">Projeto desenvolvido na Faculdade Senac</p>
+            
+            <div class="experiencia-detalhes">
+                <h5 class="detalhe-titulo">Sobre o Projeto:</h5>
+                <p class="experiencia-descricao">
+                    Protótipo de aplicativo que conecta psicólogos e pacientes de forma remota, 
+                    facilitando consultas à distância. A plataforma também apoia recém-formados 
+                    em psicologia, oferecendo espaço para expandir sua clientela. Projeto 
+                    destacado em palestra institucional na Senac.
+                </p>
+            </div>
+        </div>
+
+        <div class="experiencia-item">
+            <div class="experiencia-cabecalho">
+                <span class="experiencia-icone">🌾</span>
+                <h4 class="experiencia-empresa">LÁ DO CAMPO - 2024</h4>
+            </div>
+            <p class="experiencia-local">Projeto desenvolvido para o Porto Digital</p>
+            
+            <div class="experiencia-detalhes">
+                <h5 class="detalhe-titulo">Sobre o Projeto:</h5>
+                <p class="experiencia-descricao">
+                    Plataforma de e-commerce que conecta artesãos locais a consumidores e chefs, 
+                    com sistema de logística integrado. Valorização das histórias e tradições 
+                    culturais por trás dos produtos artesanais, desenvolvido durante o Kickoff 
+                    do Porto Digital.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

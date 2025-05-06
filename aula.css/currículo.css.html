@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.jpg" type="image/jpg">
+    <title>Currículo Interativo - Ana Beatriz</title>
+    <style>
+        :root {
+            --roxo-escuro: #2A0944;
+            --roxo-vibrante: #7E57C2;
+            --destaque: #FFAB91;
+            --degrade: linear-gradient(135deg, #2A0944 0%, #7E57C2 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background: var(--degrade);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .constelacao {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255,171,145,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255,171,145,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            position: relative;
+        }
+
+        .avatar-container {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .avatar-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s;
+            box-shadow: 0 0 30px rgba(126,87,194,0.5);
+            border: 3px solid var(--destaque);
+            animation: pulse 4s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .avatar-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%) contrast(110%);
+        }
+
+        .holographic-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg,
+                transparent 48%,
+                rgba(255,171,145,0.2) 50%,
+                transparent 52%
+            );
+            animation: hologram 3s infinite;
+        }
+
+        @keyframes hologram {
+            0% { transform: translate(-50%, -50%) rotate(45deg); opacity: 0; }
+            50% { transform: translate(50%, 50%) rotate(45deg); opacity: 1; }
+            100% { transform: translate(150%, 150%) rotate(45deg); opacity: 0; }
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin: 1.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(to right, lch(77.54% 38.13 42.96), #7E57C2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav {
+            background: rgba(61, 42, 109, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            margin: 2rem auto;
+            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(109, 74, 255, 0.3);
+            position: relative;
+            border: 1px solid var(--roxo-claro);
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,107,107,0.1));
+            pointer-events: none;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: rgba(255,255,255,0.05);
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #6d4aff4d , #7E57C2);
+            transition: 0.5s;
+        }
+
+        nav a:hover {
+            background: var(--roxo-claro);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px var(--roxo-claro);
+        }
+
+        nav a:hover::before {
+            left: 100%;
+        }
+
+
+        iframe {
+            width: 90%;
+            height: 600px;
+            margin: 2rem auto;
+            border: none;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 40px rgba(42,9,68,0.3);
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255,171,145,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-orb {
+                gap: 1rem;
+            }
+            
+            .nav-item {
+                width: 60px;
+                height: 60px;
+            }
+            
+            iframe {
+                height: 400px;
+            }
+        }
+        fieldset {
+            border: 3px solid var(--roxo-claro);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem auto;
+            width: 90%;
+            background: rgba(43, 9, 68, 0.9);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        fieldset:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(174, 37, 104, 0.4);
+        }
+
+        legend {
+            font-size: 1.5em;
+            color: var(--destaque);
+            padding: 0 1.5rem;
+            background: var(--roxo-escuro);
+            border-radius: 30px;
+            border: 2px solid var(--roxo-claro);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .formulario-contato {
+            display: grid;
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: var(--destaque);
+            background: rgba(255,255,255,0.05);
+            outline: none;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.6);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label,
+        .input-group textarea:focus ~ label,
+        .input-group textarea:valid ~ label {
+            top: -10px;
+            left: 0.8rem;
+            font-size: 0.8em;
+            color: var(--destaque);
+            background: var(--roxo-escuro);
+            padding: 0 0.5rem;
+        }
+
+        .btn-enviar {
+            background: linear-gradient(45deg, var(--roxo-claro), var(--destaque));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-enviar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(254,194,96,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="constelacao"></div>
+
+    <header>
+        <div class="avatar-container">
+            <div class="avatar-frame">
+                <img src="img/foto.png" alt="Ana Beatriz" height="200">
+                <div class="holographic-effect"></div>
+            </div>
+        </div>
+        <h1>Ana Beatriz</h1>
+        <h3>ANALISTA E DESENVOLVEDORA DE SISTEMAS</h3>
+    </header>
+
+    <nav>
+        <div class="nav-grid">
+            <a href="pags/sobre.css.html" target="main">SOBRE</a>
+            <a href="pags/formação.css.html" target="main">FORMAÇÃO</a>
+            <a href="pags/experiência.css.html" target="main">EXPERIÊNCIA</a>
+            <a href="pags/habilidades.css.html" target="main">HABILIDADES</a>
+            <a href="pags/cursos.css.html" target="main">CURSOS</a>
+            <a href="pags/endereço.css.html" target="main">ENDEREÇO</a>
+            <a href="pags/contato.css.html" target="main">CONTATO</a>
+        </div>
+    </nav>
+
+    <iframe name="main" src="pags/sobre.css.html"></iframe>
+
+    <footer>
+        <p>DESENVOLVIDO POR ANA BEATRIZ DA SILVA</p>
+        <p>© 2025 CYBER SYSTEMS - TODOS OS DIREITOS RESERVADOS</p>
+    </footer>
+   
+    <script>
+     function loadPage(page) {
+            document.querySelector('iframe').src = `pags/${page}`;
+        }  
+    </script>
+    
+</body>
+</html>

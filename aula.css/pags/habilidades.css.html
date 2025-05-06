@@ -1,0 +1,128 @@
+
+<style>
+    .habilidades-container {
+        background: linear-gradient(145deg, rgba(42,9,68,0.9), rgba(59,24,95,0.9));
+        border-radius: 15px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 2px solid var(--roxo-claro);
+        box-shadow: 0 0 20px rgba(161,37,104,0.2);
+    }
+    
+    .habilidades-titulo {
+        color: var(--destaque);
+        font-size: 1.8em;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(254,194,96,0.3);
+    }
+    
+    .habilidades-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .habilidade-item {
+        background: rgba(161,37,104,0.1);
+        border-radius: 10px;
+        padding: 1.5rem;
+        border: 1px solid var(--roxo-claro);
+        transition: all 0.3s ease;
+    }
+    
+    .habilidade-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(161,37,104,0.3);
+    }
+    
+    .habilidade-cabecalho {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .habilidade-icone {
+        font-size: 1.5em;
+        filter: drop-shadow(0 0 5px var(--destaque));
+    }
+    
+    .habilidade-titulo {
+        color: var(--destaque);
+        margin: 0;
+        font-size: 1.2em;
+    }
+    
+    .habilidade-lista {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    
+    .habilidade-tag {
+        background: rgba(254,194,96,0.1);
+        color: var(--destaque);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        border: 1px solid var(--destaque);
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+    }
+    
+    .habilidade-tag:hover {
+        background: var(--destaque);
+        color: var(--roxo-escuro);
+        box-shadow: 0 0 10px var(--destaque);
+    }
+    
+    @media (max-width: 768px) {
+        .habilidades-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .habilidade-item {
+            padding: 1rem;
+        }
+    }
+    </style>
+    <h3 class="habilidades-titulo">HABILIDADES TÉCNICAS</h3>
+    
+    <div class="habilidades-grid">
+        <div class="habilidade-item">
+            <div class="habilidade-cabecalho">
+                <span class="habilidade-icone">💻</span>
+                <h4 class="habilidade-titulo">Linguagens de Programação</h4>
+            </div>
+            <div class="habilidade-lista">
+                <span class="habilidade-tag">HTML</span>
+                <span class="habilidade-tag">CSS</span>
+                <span class="habilidade-tag">JavaScript</span>
+            </div>
+        </div>
+
+        <div class="habilidade-item">
+            <div class="habilidade-cabecalho">
+                <span class="habilidade-icone">🗃️</span>
+                <h4 class="habilidade-titulo">Bancos de Dados</h4>
+            </div>
+            <div class="habilidade-lista">
+                <span class="habilidade-tag">MySQL</span>
+            </div>
+        </div>
+
+        <div class="habilidade-item">
+            <div class="habilidade-cabecalho">
+                <span class="habilidade-icone">🛠️</span>
+                <h4 class="habilidade-titulo">Ferramentas</h4>
+            </div>
+            <div class="habilidade-lista">
+                <span class="habilidade-tag">Figma</span>
+                <span class="habilidade-tag">VS Code</span>
+                <span class="habilidade-tag">GitHub</span>
+                <span class="habilidade-tag">Miro</span>
+            </div>
+        </div>
+    </div>
+</div>

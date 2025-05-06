@@ -1,0 +1,113 @@
+
+<style>
+    .formacoes-container {
+        background: linear-gradient(145deg, rgba(42,9,68,0.9), rgba(59,24,95,0.9));
+        border-radius: 15px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 2px solid var(--roxo-claro);
+        box-shadow: 0 0 20px rgba(161,37,104,0.2);
+    }
+    
+    .formacoes-titulo {
+        color: var(--destaque);
+        font-size: 1.8em;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(254,194,96,0.3);
+    }
+    
+    .formacao-item {
+        background: rgba(161,37,104,0.1);
+        border-radius: 10px;
+        padding: 1.5rem;
+        border: 1px solid var(--roxo-claro);
+        transition: all 0.3s ease;
+    }
+    
+    .formacao-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(161,37,104,0.3);
+    }
+    
+    .formacao-cabecalho {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .formacao-icone {
+        font-size: 2em;
+        filter: drop-shadow(0 0 5px var(--destaque));
+        margin-top: 0.5rem;
+    }
+    
+    .formacao-curso {
+        color: var(--destaque);
+        margin: 0 0 0.5rem 0;
+        font-size: 1.3em;
+    }
+    
+    .formacao-detalhes {
+        display: grid;
+        gap: 0.8rem;
+    }
+    
+    .detalhe-item {
+        color: #ffffffcc;
+        margin: 0;
+        line-height: 1.6;
+        padding-left: 1rem;
+        border-left: 2px solid var(--destaque);
+    }
+    
+    .detalhe-rotulo {
+        color: var(--destaque);
+        font-weight: 500;
+        display: inline-block;
+        min-width: 100px;
+    }
+    
+    @media (max-width: 768px) {
+        .formacoes-container {
+            padding: 1.5rem;
+        }
+        
+        .formacao-cabecalho {
+            gap: 1rem;
+            flex-direction: column;
+        }
+        
+        .detalhe-rotulo {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+    }
+</style>
+
+    <h3 class="formacoes-titulo">FORMAÇÕES</h3>
+    
+    <div class="formacao-item">
+        <div class="formacao-cabecalho">
+            <span class="formacao-icone">🎓</span>
+            <div>
+                <h4 class="formacao-curso">Análise e Desenvolvimento de Sistemas</h4>
+                <div class="formacao-detalhes">
+                    <p class="detalhe-item">
+                        <span class="detalhe-rotulo">Universidade:</span> 
+                        Faculdade Senac Pernambuco
+                    </p>
+                    <p class="detalhe-item">
+                        <span class="detalhe-rotulo">Período:</span> 
+                        2° Período - Matutino
+                    </p>
+                    <p class="detalhe-item">
+                        <span class="detalhe-rotulo">Conclusão:</span> 
+                        2026 (Previsão)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

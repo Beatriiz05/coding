@@ -1,0 +1,150 @@
+<style>:root {
+    --roxo-escuro: #2A0944;
+    --roxo-medio: #3B185F;
+    --roxo-claro: #A12568;
+    --destaque: #FEC260;
+    --degrade: linear-gradient(45deg, #2A0944, #3B185F);
+}
+
+.sobre {
+    background: var(--degrade);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 2px solid var(--roxo-claro);
+    box-shadow: 0 0 20px rgba(161, 37, 104, 0.2);
+}
+
+.titulo-destaque {
+    color: var(--destaque);
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(254, 194, 96, 0.3);
+}
+
+.texto-principal {
+    color: #fff;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.1em;
+}
+
+.destaque {
+    color: var(--destaque);
+    font-weight: 600;
+}
+
+.contato {
+    background: rgba(59, 24, 95, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-contato {
+    display: grid;
+    gap: 1rem;
+}
+
+.detalhe-contato {
+    color: var(--destaque);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.icone {
+    font-size: 1.2em;
+}
+
+.link-email {
+    color: var(--destaque);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-email:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--destaque);
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    transition: all 0.3s ease;
+}
+
+.social-icone {
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(0 0 5px rgba(254, 194, 96, 0.3));
+    transition: all 0.3s ease;
+}
+
+.social-link:hover .social-icone {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px var(--destaque));
+}
+
+@media (max-width: 768px) {
+    .sobre {
+        padding: 1.5rem;
+    }
+    
+    .redes-sociais {
+        gap: 1.5rem;
+    }
+    
+    .social-icone {
+        width: 40px;
+        height: 40px;
+    }
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+}
+
+nav a:hover {
+    background: var(--roxo-claro);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px var(--roxo-claro);
+}
+</style>
+
+<h3 class="titulo-destaque">SOBRE</h3>
+     
+    <div class="conteudo">
+        <p class="texto-principal">
+            Olá! Meu nome é Ana Beatriz, mas pode me chamar de Bia. Tenho 19 anos e sou estudante de Análise e Desenvolvimento de Sistemas, atualmente estou no segundo período pela faculdade Senac Pernambuco. Com uma paixão por tecnologia, já desenvolvi habilidades em <span class="destaque">JavaScript</span>, <span class="destaque">Banco de Dados (MySQL)</span> e <span class="destaque">UI/UX Design</span>. Sou uma pessoa proativa, comunicativa e apaixonada por aprender e crescer na área tecnológica. Meu objetivo é continuar expandindo meus conhecimentos e habilidades, contribuindo para projetos inovadores e desafiadores que possam gerar impacto positivo.
+        </p>
+
+        <div class="contato">
+            <div class="info-contato">
+                <p class="detalhe-contato"><span class="icone">📞</span> +55 (81) 98222-8365</p>
+                <p class="detalhe-contato"><span class="icone">✉️</span> <a href="mailto:anabeatrizdasilva263@gmail.com" class="link-email">anabeatrizdasilva263@gmail.com</a></p>
+            </div>
+        </div>
+
+    <nav>
+        <div class="redes-sociais">
+            <a href="https://github.com/Beatriiz05" target="_blank" class="social-link" target="main">GitHub</a>
+            <a href="https://www.linkedin.com/in/beatriz-dev/" target="_blank" class="social-link" target="main">Linkedin</a>
+        </div>
+    </nav>
+    </div>

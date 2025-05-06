@@ -1,0 +1,143 @@
+
+<style>
+    .cursos-container {
+        background: linear-gradient(145deg, rgba(42,9,68,0.9), rgba(59,24,95,0.9));
+        border-radius: 15px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 2px solid var(--roxo-claro);
+        box-shadow: 0 0 20px rgba(161,37,104,0.2);
+    }
+    
+    .cursos-titulo {
+        color: var(--destaque);
+        font-size: 1.8em;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(254,194,96,0.3);
+    }
+    
+    .cursos-grid {
+        display: grid;
+        gap: 0.8rem;
+    }
+    
+    .curso-header {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        color: var(--destaque);
+        padding: 1rem;
+        background: rgba(161,37,104,0.2);
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+    
+    .curso-item {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        align-items: center;
+        padding: 1rem;
+        background: rgba(255,255,255,0.05);
+        border-radius: 8px;
+        border: 1px solid rgba(161,37,104,0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .curso-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 15px rgba(161,37,104,0.3);
+        background: rgba(161,37,104,0.1);
+    }
+    
+    .curso-status {
+        font-weight: 500;
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    
+    .concluido {
+        background: rgba(76, 175, 80, 0.15);
+        color: #4CAF50;
+        border: 1px solid #4CAF50;
+    }
+    
+    .previsto {
+        background: rgba(255, 193, 7, 0.15);
+        color: #FFC107;
+        border: 1px solid #FFC107;
+    }
+    
+    @media (max-width: 768px) {
+        .cursos-container {
+            padding: 1.5rem;
+        }
+        
+        .curso-header,
+        .curso-item {
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+        
+        .curso-status {
+            justify-self: start;
+        }
+    }
+</style>
+
+
+<h3 class="cursos-titulo">CURSOS</h3>
+    
+    <div class="cursos-grid">
+        <div class="curso-header">
+            <span>Instituição</span>
+            <span>Curso</span>
+            <span>Status</span>
+        </div>
+
+        <div class="curso-item">
+            <div class="curso-instituicao">Dynamic</div>
+            <div class="curso-nome">Word</div>
+            <div class="curso-status concluido">Concluído 2024</div>
+        </div>
+
+        <div class="curso-item">
+            <div class="curso-instituicao">Dynamic</div>
+            <div class="curso-nome">Excel</div>
+            <div class="curso-status concluido">Concluído 2024</div>
+        </div>
+
+        <div class="curso-item">
+            <div class="curso-instituicao">Dynamic</div>
+            <div class="curso-nome">Power Point</div>
+            <div class="curso-status concluido">Concluído 2024</div>
+        </div>
+
+        <div class="curso-item">
+            <div class="curso-instituicao">Tic em Trilhas</div>
+            <div class="curso-nome">UX/UI</div>
+            <div class="curso-status concluido">Concluído 2024</div>
+        </div>
+
+        <div class="curso-item">
+            <div class="curso-instituicao">Alura</div>
+            <div class="curso-nome">HTML</div>
+            <div class="curso-status previsto">2025</div>
+        </div>
+
+        <div class="curso-item">
+            <div class="curso-instituicao">Alura</div>
+            <div class="curso-nome">CSS</div>
+            <div class="curso-status previsto">2025</div>
+        </div>
+
+        <div class="curso-item">
+            <div class="curso-instituicao">Rocketseat</div>
+            <div class="curso-nome">ReactJS</div>
+            <div class="curso-status previsto">2025</div>
+        </div>
+    </div>
+</div>
